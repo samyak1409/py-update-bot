@@ -3,12 +3,15 @@
 from requests import get as get_request
 from bs4 import BeautifulSoup
 from sys import version
+from platform import system
 
 
 # ATTRIBUTES:
 
+# print('\n' + version); input()  # debugging
 current_version = version.split()[0]
 BASE_URL = 'https://www.python.org'
+DEBUG = True  # (default: True)
 
 
 # SENDING REQUEST AND GETTING RESPONSE:
@@ -32,16 +35,17 @@ print('\n' + 'Current Version:', current_version, '\n' + 'Latest Version :', lat
 # COMPARING THE VERSION:
 
 if current_version == latest_version:
-    print('\nLatest version is already installed!')
+    print('\n' + 'Latest version is already installed!')
 else:
-    print('\nVersion update is available.')
+    print('\n' + 'Version update is available.')
 
     # PARSING THE DOWNLOAD LINKS:
 
     all_os = download_info.find(name='p', recursive=False)
     # print(all_os.prettify()); input()  # debugging
     download_pages = {os.text: BASE_URL+os['href'] for os in all_os.find_all(name='a')}
-    print('\n' + 'Download Pages:', download_pages)
+    if DEBUG:
+        print('\n' + 'Download Pages:', download_pages)
 
     direct_download_links = download_pages
 
@@ -60,14 +64,31 @@ else:
                 direct_download_links['Linux/UNIX'] = link
             case 'pkg':
                 direct_download_links['macOS'] = link
-            case _:  # no file extension
+            # case _:  # no file extension
                 # direct_download_links['Other'] = link  # because 'https://www.python.org/download/other/' is making more sense than 'https://www.python.org/downloads/release/python-3102/'
-                pass
 
-    print('\n' + 'Direct Download Links:', direct_download_links)
+    if DEBUG:
+        print('Direct Download Links:', direct_download_links)
+
+    # IDENTIFYING THE UNDERLYING OS (https://stackoverflow.com/questions/1854/python-what-os-am-i-running-on):
+    # When to use os.name, sys.platform, or platform.system?: https://stackoverflow.com/a/58071295
+
+    os = system()  # Returns the system/OS name, such as 'Linux', 'Darwin', 'Java', 'Windows'. An empty string is returned if the value cannot be determined.
+    print('\n' + 'OS:', os)
+
+    match os:
+        case 'Windows':
+            download_link = direct_download_links['Windows']
+        case 'Linux':
+            download_link = direct_download_links['Linux/UNIX']
+        case 'Darwin':
+            download_link = direct_download_links['macOS']
+        case _:  # OS is 'Java' or '' (i.e. undetermined OS), so, in either cases, direct_download_links['Other'] i.e. 'https://www.python.org/download/other/' will do the work
+            download_link = direct_download_links['Other']
+
+    print('Download Link:', download_link)
 
 
 # todo:
-#  which os
 #  downloading
 #  startup with system
