@@ -28,7 +28,6 @@ pip install -r requirements.txt
 This is the most important step of the Bot Setup, once done, you're just ready to go!
 
 #### For Windows
-[Schedule a Python Script to Run Daily (Using batch file)](https://www.geeksforgeeks.org/schedule-a-python-script-to-run-daily/#:~:text=Method%201%3A%20Using%20batch%20file)
 [Automatically run a Python program when the system boots](https://stackoverflow.com/questions/59113569/automatically-run-a-python-program-when-the-system-boots)
 
 #### For Linux

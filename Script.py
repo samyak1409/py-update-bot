@@ -1,11 +1,12 @@
 # IMPORTS:
 
-from requests import get as get_request
+from requests import get as get_request, RequestException
 from bs4 import BeautifulSoup
 from sys import version
 from platform import system
 from tkinter.messagebox import askyesno, showinfo
 from webbrowser import open as wb_open
+from time import sleep
 
 
 # ATTRIBUTES:
@@ -21,7 +22,17 @@ SCRIPT_NAME = 'Python Update Assistant'
 # SENDING REQUEST AND GETTING RESPONSE:
 
 print('\n' + f'Getting the data from {BASE_URL}...')
-response = get_request(url=f'{BASE_URL}/downloads', stream=False)
+first_try = True
+while True:
+    try:
+        response = get_request(url=f'{BASE_URL}/downloads', stream=False)
+    except RequestException as e:
+        if first_try:  # don't print the error message repeatedly
+            print('\n' + f'{type(e).__name__}:', e.__doc__.split('\n')[0], 'Trying again (every second) in the background...')
+            first_try = False
+        sleep(1)  # take a breath
+    else:
+        break
 # print(response.status_code); input()  # debugging
 
 
