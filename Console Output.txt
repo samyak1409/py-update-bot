@@ -1,15 +1,21 @@
 C:\Users\Samyak\AppData\Local\Programs\Python\Python310\python.exe "C:/Users/Samyak/PycharmProjects/GitHub Repos/Latest Interpreter Downloader/Script.py"
 
+Getting the data from https://www.python.org...
+
 Current Version: 3.10.2
 Latest Version : 3.10.2
 
-Latest version is already installed!
+Latest version is already installed.
+
+Bye!
 
 Process finished with exit code 0
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 C:\Users\Samyak\AppData\Local\Programs\Python\Python310\python.exe "C:/Users/Samyak/PycharmProjects/GitHub Repos/Latest Interpreter Downloader/Script.py"
+
+Getting the data from https://www.python.org...
 
 Current Version: 3.10.2
 Latest Version : 3.10.3
@@ -21,5 +27,9 @@ Direct Download Links: {'Windows': 'https://www.python.org/ftp/python/3.10.3/pyt
 
 OS: Windows
 Download Link: https://www.python.org/ftp/python/3.10.3/python-3.10.3-amd64.exe
+
+Download started in default browser.
+
+Bye!
 
 Process finished with exit code 0
