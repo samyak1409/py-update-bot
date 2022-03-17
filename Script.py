@@ -65,3 +65,9 @@ else:
                 pass
 
     print('\n' + 'Direct Download Links:', direct_download_links)
+
+
+# todo:
+#  which os
+#  downloading
+#  startup with system
