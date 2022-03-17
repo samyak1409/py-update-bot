@@ -113,7 +113,3 @@ else:
 
 
 print('\n' + 'Bye!')
-
-
-# todo:
-#  startup with system
