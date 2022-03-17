@@ -1,9 +1,23 @@
 C:\Users\Samyak\AppData\Local\Programs\Python\Python310\python.exe "C:/Users/Samyak/PycharmProjects/GitHub Repos/Latest Interpreter Downloader/Script.py"
 
-download_pages: {'Windows': 'https://www.python.org/downloads/windows/', 'Linux/UNIX': 'https://www.python.org/downloads/source/', 'macOS': 'https://www.python.org/downloads/macos/', 'Other': 'https://www.python.org/download/other/'}
+Current Version: 3.10.2
+Latest Version : 3.10.2
 
-latest_version: Download Python 3.10.3
+Latest version is already installed!
 
-direct_download_links: {'Windows': 'https://www.python.org/ftp/python/3.10.3/python-3.10.3-amd64.exe', 'Linux/UNIX': 'https://www.python.org/ftp/python/3.10.3/Python-3.10.3.tar.xz', 'macOS': 'https://www.python.org/ftp/python/3.10.3/python-3.10.3-macos11.pkg', 'Other': 'https://www.python.org/download/other/'}
+Process finished with exit code 0
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\Samyak\AppData\Local\Programs\Python\Python310\python.exe "C:/Users/Samyak/PycharmProjects/GitHub Repos/Latest Interpreter Downloader/Script.py"
+
+Current Version: 3.10.2
+Latest Version : 3.10.3
+
+Version update is available.
+
+Download Pages: {'Windows': 'https://www.python.org/downloads/windows/', 'Linux/UNIX': 'https://www.python.org/downloads/source/', 'macOS': 'https://www.python.org/downloads/macos/', 'Other': 'https://www.python.org/download/other/'}
+
+Direct Download Links: {'Windows': 'https://www.python.org/ftp/python/3.10.3/python-3.10.3-amd64.exe', 'Linux/UNIX': 'https://www.python.org/ftp/python/3.10.3/Python-3.10.3.tar.xz', 'macOS': 'https://www.python.org/ftp/python/3.10.3/python-3.10.3-macos11.pkg', 'Other': 'https://www.python.org/download/other/'}
 
 Process finished with exit code 0
