@@ -9,6 +9,9 @@ from webbrowser import open as wb_open
 from time import sleep
 
 
+print('\n' + 'PYTHON AUTO-UPDATE BOT')
+
+
 # ATTRIBUTES:
 
 # print('\n' + version); input()  # debugging
@@ -124,3 +127,4 @@ else:
 
 
 print('\n' + 'Bye!')
+sleep(1)  # let user see the message
