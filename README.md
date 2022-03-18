@@ -14,6 +14,15 @@ Gets you rid of:
 - Or wasting time in checking if the update is available or not again and again from [python.org/downloads](https://www.python.org/downloads). ✅
 
 
+## Sample Screenshots
+
+1) On computer start, bot automatically checks for update, and if available, prompts the user for permission to download.
+<img src="Sample%20Screenshots/1)%20Update%20Auto-Found.png">
+
+2) Downloads the update.
+<img src="Sample%20Screenshots/2)%20Downloading.png">
+
+
 ## How users can get started with the project
 
 ### Install the Dependencies (Python Packages 🐍)
